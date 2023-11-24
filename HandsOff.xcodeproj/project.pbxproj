@@ -282,6 +282,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandsOff/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "HandsOff needs your permission to put the display to sleep.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandOff devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -319,6 +320,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandsOff/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "HandsOff needs your permission to put the display to sleep.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandOff devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

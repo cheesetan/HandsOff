@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var model = DeviceFinderViewModel()
-
+    @ObservedObject var model: DeviceFinderViewModel = .shared
+    
     var body: some View {
         NavigationStack(path: $model.joinedPeer) {
             List {
@@ -36,19 +36,6 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Nearby Devices")
-            .onChange(of: model.lockRequest) { oldValue, newValue in
-                let script = "tell application \"System Events\" to sleep"
-                guard let appleScript = NSAppleScript(source: script) else { return }
-                var error: NSDictionary?
-                appleScript.executeAndReturnError(&error)
-                if let error = error {
-                    print(error[NSAppleScript.errorAppName] as! String)
-                    print(error[NSAppleScript.errorBriefMessage] as! String)
-                    print(error[NSAppleScript.errorMessage] as! String)
-                    print(error[NSAppleScript.errorNumber] as! NSNumber)
-                    print(error[NSAppleScript.errorRange] as! NSRange)
-                }
-            }
             .onAppear {
                 model.startBrowsing()
                 model.isAdvertised = true

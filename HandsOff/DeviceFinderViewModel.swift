@@ -25,6 +25,8 @@ struct PermitionRequest: Identifiable, Equatable {
 }
 
 class DeviceFinderViewModel: NSObject, ObservableObject {
+    static let shared: DeviceFinderViewModel = .init()
+    
     private let advertiser: MCNearbyServiceAdvertiser
     private let session: MCSession
     private let serviceType = "nearby-devices"
@@ -38,8 +40,6 @@ class DeviceFinderViewModel: NSObject, ObservableObject {
             isAdvertised ? advertiser.startAdvertisingPeer() : advertiser.stopAdvertisingPeer()
         }
     }
-    
-    @Published var lockRequest: Int = 0
     
     @Published var selectedPeer: PeerDevice? {
         didSet {
@@ -125,7 +125,15 @@ class DeviceFinderViewModel: NSObject, ObservableObject {
 
 extension DeviceFinderViewModel: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-        peers.append(PeerDevice(peerId: peerID))
+        var existing = false
+        peers.forEach { peer in
+            if peer.peerId == peerID {
+                existing = true
+            }
+        }
+        if !existing {
+            peers.append(PeerDevice(peerId: peerID))
+        }
     }
     
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
@@ -140,7 +148,20 @@ extension DeviceFinderViewModel: MCNearbyServiceAdvertiserDelegate {
         withContext context: Data?,
         invitationHandler: @escaping (Bool, MCSession?) -> Void
     ) {
-        lockRequest += 1
+        print("received")
+        #if os(macOS)
+        let script = "tell application \"System Events\" to sleep"
+        guard let appleScript = NSAppleScript(source: script) else { return }
+        var error: NSDictionary?
+        appleScript.executeAndReturnError(&error)
+        if let error = error {
+            print(error[NSAppleScript.errorAppName] as! String)
+            print(error[NSAppleScript.errorBriefMessage] as! String)
+            print(error[NSAppleScript.errorMessage] as! String)
+            print(error[NSAppleScript.errorNumber] as! NSNumber)
+            print(error[NSAppleScript.errorRange] as! NSRange)
+        }
+        #endif
     }
 }
 
