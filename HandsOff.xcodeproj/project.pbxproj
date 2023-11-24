@@ -11,6 +11,7 @@
 		F3703E0A2B10EE2A002ECB9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3703E092B10EE2A002ECB9A /* ContentView.swift */; };
 		F3703E0C2B10EE2C002ECB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */; };
 		F3703E0F2B10EE2C002ECB9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */; };
+		F3703E162B10EFF5002ECB9A /* DeviceFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		F3703E092B10EE2A002ECB9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFinderViewModel.swift; sourceTree = "<group>"; };
+		F3703E172B10F0FF002ECB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +54,10 @@
 		F3703E062B10EE2A002ECB9A /* HandsOff */ = {
 			isa = PBXGroup;
 			children = (
+				F3703E172B10F0FF002ECB9A /* Info.plist */,
 				F3703E072B10EE2A002ECB9A /* HandsOffApp.swift */,
 				F3703E092B10EE2A002ECB9A /* ContentView.swift */,
+				F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */,
 				F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */,
 				F3703E0D2B10EE2C002ECB9A /* Preview Content */,
 			);
@@ -137,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3703E162B10EFF5002ECB9A /* DeviceFinderViewModel.swift in Sources */,
 				F3703E0A2B10EE2A002ECB9A /* ContentView.swift in Sources */,
 				F3703E082B10EE2A002ECB9A /* HandsOffApp.swift in Sources */,
 			);
@@ -275,6 +281,9 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandsOff/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "HandsOff needs your permission to put the display to sleep.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandOff devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,12 +293,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheesetan.HandsOff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +318,9 @@
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandsOff/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "HandsOff needs your permission to put the display to sleep.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandOff devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,12 +330,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cheesetan.HandsOff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
