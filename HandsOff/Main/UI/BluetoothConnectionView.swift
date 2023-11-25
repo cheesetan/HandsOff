@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  BluetoothConnectionView.swift
 //  HandsOff
 //
-//  Created by Tristan Chay on 24/11/23.
+//  Created by Tristan Chay on 25/11/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct BluetoothConnectionView: View {
     
     @ObservedObject var model: DeviceFinderViewModel = .shared
     
@@ -45,5 +45,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    BluetoothConnectionView()
 }

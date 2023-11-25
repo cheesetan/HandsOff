@@ -12,6 +12,9 @@
 		F3703E0C2B10EE2C002ECB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */; };
 		F3703E0F2B10EE2C002ECB9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */; };
 		F3703E162B10EFF5002ECB9A /* DeviceFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */; };
+		F3B227F82B1188A000AFE97A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B227F72B1188A000AFE97A /* NetworkMonitor.swift */; };
+		F3B227FA2B11896100AFE97A /* BluetoothConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B227F92B11896100AFE97A /* BluetoothConnectionView.swift */; };
+		F3B227FC2B1189CE00AFE97A /* FirebaseConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B227FB2B1189CE00AFE97A /* FirebaseConnectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFinderViewModel.swift; sourceTree = "<group>"; };
 		F3703E172B10F0FF002ECB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F3B227F72B1188A000AFE97A /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		F3B227F92B11896100AFE97A /* BluetoothConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectionView.swift; sourceTree = "<group>"; };
+		F3B227FB2B1189CE00AFE97A /* FirebaseConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConnectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F3703E172B10F0FF002ECB9A /* Info.plist */,
-				F3703E072B10EE2A002ECB9A /* HandsOffApp.swift */,
-				F3703E092B10EE2A002ECB9A /* ContentView.swift */,
-				F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */,
+				F3B227FE2B1189DE00AFE97A /* Application */,
+				F3B227FF2B1189E400AFE97A /* Main */,
 				F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */,
 				F3703E0D2B10EE2C002ECB9A /* Preview Content */,
 			);
@@ -70,6 +75,42 @@
 				F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3B227FD2B1189D400AFE97A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */,
+				F3B227F72B1188A000AFE97A /* NetworkMonitor.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F3B227FE2B1189DE00AFE97A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F3703E072B10EE2A002ECB9A /* HandsOffApp.swift */,
+				F3703E092B10EE2A002ECB9A /* ContentView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F3B227FF2B1189E400AFE97A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F3B227FD2B1189D400AFE97A /* Managers */,
+				F3B228002B1189E900AFE97A /* UI */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F3B228002B1189E900AFE97A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F3B227F92B11896100AFE97A /* BluetoothConnectionView.swift */,
+				F3B227FB2B1189CE00AFE97A /* FirebaseConnectionView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3703E162B10EFF5002ECB9A /* DeviceFinderViewModel.swift in Sources */,
+				F3B227FC2B1189CE00AFE97A /* FirebaseConnectionView.swift in Sources */,
+				F3B227F82B1188A000AFE97A /* NetworkMonitor.swift in Sources */,
 				F3703E0A2B10EE2A002ECB9A /* ContentView.swift in Sources */,
+				F3B227FA2B11896100AFE97A /* BluetoothConnectionView.swift in Sources */,
 				F3703E082B10EE2A002ECB9A /* HandsOffApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
