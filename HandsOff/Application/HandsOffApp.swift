@@ -20,6 +20,21 @@ struct HandsOffApp: App {
     var body: some Scene {
         #if os(macOS)
         MenuBarExtra("HandsOff", systemImage: "lock.square") {
+            Button("Lock Macbook") {
+                let script = "tell application \"System Events\" to sleep"
+                guard let appleScript = NSAppleScript(source: script) else { return }
+                var error: NSDictionary?
+                appleScript.executeAndReturnError(&error)
+                if let error = error {
+                    print(error[NSAppleScript.errorAppName] as! String)
+                    print(error[NSAppleScript.errorBriefMessage] as! String)
+                    print(error[NSAppleScript.errorMessage] as! String)
+                    print(error[NSAppleScript.errorNumber] as! NSNumber)
+                    print(error[NSAppleScript.errorRange] as! NSRange)
+                }
+            }
+            .keyboardShortcut("l")
+            Divider()
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }
