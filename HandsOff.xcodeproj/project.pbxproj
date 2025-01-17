@@ -3,32 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
-
-/* Begin PBXBuildFile section */
-		F3703E082B10EE2A002ECB9A /* HandsOffApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3703E072B10EE2A002ECB9A /* HandsOffApp.swift */; };
-		F3703E0A2B10EE2A002ECB9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3703E092B10EE2A002ECB9A /* ContentView.swift */; };
-		F3703E0C2B10EE2C002ECB9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */; };
-		F3703E0F2B10EE2C002ECB9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */; };
-		F3703E162B10EFF5002ECB9A /* DeviceFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */; };
-		F3B227F82B1188A000AFE97A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B227F72B1188A000AFE97A /* NetworkMonitor.swift */; };
-		F3B227FA2B11896100AFE97A /* BluetoothConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B227F92B11896100AFE97A /* BluetoothConnectionView.swift */; };
-		F3B227FC2B1189CE00AFE97A /* FirebaseConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B227FB2B1189CE00AFE97A /* FirebaseConnectionView.swift */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3703E042B10EE2A002ECB9A /* HandsOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3703E072B10EE2A002ECB9A /* HandsOffApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandsOffApp.swift; sourceTree = "<group>"; };
-		F3703E092B10EE2A002ECB9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFinderViewModel.swift; sourceTree = "<group>"; };
-		F3703E172B10F0FF002ECB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F3B227F72B1188A000AFE97A /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		F3B227F92B11896100AFE97A /* BluetoothConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectionView.swift; sourceTree = "<group>"; };
-		F3B227FB2B1189CE00AFE97A /* FirebaseConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConnectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F3D976472D39F8E4000FB9D9 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F3703E032B10EE2A002ECB9A /* HandsOff */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F3D9763E2D39F8E4000FB9D9 /* HandsOff */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F3D976472D39F8E4000FB9D9 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = HandsOff; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F3703E012B10EE2A002ECB9A /* Frameworks */ = {
@@ -44,7 +38,7 @@
 		F3703DFB2B10EE2A002ECB9A = {
 			isa = PBXGroup;
 			children = (
-				F3703E062B10EE2A002ECB9A /* HandsOff */,
+				F3D9763E2D39F8E4000FB9D9 /* HandsOff */,
 				F3703E052B10EE2A002ECB9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,62 +49,6 @@
 				F3703E042B10EE2A002ECB9A /* HandsOff.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F3703E062B10EE2A002ECB9A /* HandsOff */ = {
-			isa = PBXGroup;
-			children = (
-				F3703E172B10F0FF002ECB9A /* Info.plist */,
-				F3B227FE2B1189DE00AFE97A /* Application */,
-				F3B227FF2B1189E400AFE97A /* Main */,
-				F3703E0B2B10EE2C002ECB9A /* Assets.xcassets */,
-				F3703E0D2B10EE2C002ECB9A /* Preview Content */,
-			);
-			path = HandsOff;
-			sourceTree = "<group>";
-		};
-		F3703E0D2B10EE2C002ECB9A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F3703E0E2B10EE2C002ECB9A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F3B227FD2B1189D400AFE97A /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				F3703E152B10EFF5002ECB9A /* DeviceFinderViewModel.swift */,
-				F3B227F72B1188A000AFE97A /* NetworkMonitor.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		F3B227FE2B1189DE00AFE97A /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				F3703E072B10EE2A002ECB9A /* HandsOffApp.swift */,
-				F3703E092B10EE2A002ECB9A /* ContentView.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		F3B227FF2B1189E400AFE97A /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				F3B227FD2B1189D400AFE97A /* Managers */,
-				F3B228002B1189E900AFE97A /* UI */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		F3B228002B1189E900AFE97A /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				F3B227F92B11896100AFE97A /* BluetoothConnectionView.swift */,
-				F3B227FB2B1189CE00AFE97A /* FirebaseConnectionView.swift */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +65,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F3D9763E2D39F8E4000FB9D9 /* HandsOff */,
 			);
 			name = HandsOff;
 			productName = HandsOff;
@@ -171,8 +112,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3703E0F2B10EE2C002ECB9A /* Preview Assets.xcassets in Resources */,
-				F3703E0C2B10EE2C002ECB9A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,12 +122,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3703E162B10EFF5002ECB9A /* DeviceFinderViewModel.swift in Sources */,
-				F3B227FC2B1189CE00AFE97A /* FirebaseConnectionView.swift in Sources */,
-				F3B227F82B1188A000AFE97A /* NetworkMonitor.swift in Sources */,
-				F3703E0A2B10EE2A002ECB9A /* ContentView.swift in Sources */,
-				F3B227FA2B11896100AFE97A /* BluetoothConnectionView.swift in Sources */,
-				F3703E082B10EE2A002ECB9A /* HandsOffApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,16 +252,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HandsOff/HandsOff.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HandsOff/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandsOff/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "HandsOff needs your permission to put the display to sleep.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandOff devices.";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "HandsOff needs your permission to connect to your other HandsOff devices.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "HandsOff needs your permission to connect to your other HandsOff devices.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandsOff devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,16 +294,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HandsOff/HandsOff.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HandsOff/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7K6ZTDFM48;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandsOff/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSAppleEventsUsageDescription = "HandsOff needs your permission to put the display to sleep.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandOff devices.";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "HandsOff needs your permission to connect to your other HandsOff devices.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "HandsOff needs your permission to connect to your other HandsOff devices.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "HandsOff needs your permission to connect to your other HandsOff devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

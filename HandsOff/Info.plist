@@ -7,5 +7,7 @@
 		<string>_nearby-devices._tcp</string>
 		<string>_nearby-devices._upd</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array/>
 </dict>
 </plist>
