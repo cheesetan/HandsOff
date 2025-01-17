@@ -6,8 +6,37 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F3D976C52D3A2DFE000FB9D9 /* HandsOff-watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F3D976B82D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3D976C32D3A2DFE000FB9D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3703DFC2B10EE2A002ECB9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3D976B72D3A2DFC000FB9D9;
+			remoteInfo = "HandsOff-watchOS Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3D976C62D3A2DFE000FB9D9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F3D976C52D3A2DFE000FB9D9 /* HandsOff-watchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F3703E042B10EE2A002ECB9A /* HandsOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandsOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D976B82D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HandsOff-watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -18,14 +47,29 @@
 			);
 			target = F3703E032B10EE2A002ECB9A /* HandsOff */;
 		};
+		F3D976CB2D3A2E2F000FB9D9 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Main/Managers/CentralManager.swift,
+			);
+			target = F3D976B72D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F3D9763E2D39F8E4000FB9D9 /* HandsOff */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F3D976472D39F8E4000FB9D9 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = HandsOff; sourceTree = "<group>"; };
+		F3D9763E2D39F8E4000FB9D9 /* HandsOff */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F3D976472D39F8E4000FB9D9 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F3D976CB2D3A2E2F000FB9D9 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = HandsOff; sourceTree = "<group>"; };
+		F3D976B92D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "HandsOff-watchOS Watch App"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F3703E012B10EE2A002ECB9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D976B52D3A2DFC000FB9D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				F3D9763E2D39F8E4000FB9D9 /* HandsOff */,
+				F3D976B92D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App */,
 				F3703E052B10EE2A002ECB9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				F3703E042B10EE2A002ECB9A /* HandsOff.app */,
+				F3D976B82D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,10 +107,12 @@
 				F3703E002B10EE2A002ECB9A /* Sources */,
 				F3703E012B10EE2A002ECB9A /* Frameworks */,
 				F3703E022B10EE2A002ECB9A /* Resources */,
+				F3D976C62D3A2DFE000FB9D9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F3D976C42D3A2DFE000FB9D9 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F3D9763E2D39F8E4000FB9D9 /* HandsOff */,
@@ -74,6 +122,28 @@
 			productReference = F3703E042B10EE2A002ECB9A /* HandsOff.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F3D976B72D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D976C92D3A2DFE000FB9D9 /* Build configuration list for PBXNativeTarget "HandsOff-watchOS Watch App" */;
+			buildPhases = (
+				F3D976B42D3A2DFC000FB9D9 /* Sources */,
+				F3D976B52D3A2DFC000FB9D9 /* Frameworks */,
+				F3D976B62D3A2DFC000FB9D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F3D976B92D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App */,
+			);
+			name = "HandsOff-watchOS Watch App";
+			packageProductDependencies = (
+			);
+			productName = "HandsOff-watchOS Watch App";
+			productReference = F3D976B82D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -81,11 +151,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					F3703E032B10EE2A002ECB9A = {
 						CreatedOnToolsVersion = 15.1;
+					};
+					F3D976B72D3A2DFC000FB9D9 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -103,12 +176,20 @@
 			projectRoot = "";
 			targets = (
 				F3703E032B10EE2A002ECB9A /* HandsOff */,
+				F3D976B72D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F3703E022B10EE2A002ECB9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D976B62D3A2DFC000FB9D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +206,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3D976B42D3A2DFC000FB9D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3D976C42D3A2DFE000FB9D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = F3D976B72D3A2DFC000FB9D9 /* HandsOff-watchOS Watch App */;
+			targetProxy = F3D976C32D3A2DFE000FB9D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F3703E102B10EE2C002ECB9A /* Debug */ = {
@@ -253,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandsOff/HandsOff.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -269,8 +366,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HandsOff/HandsOff.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -311,8 +408,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +425,66 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F3D976C72D3A2DFE000FB9D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "HandsOff-watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.cheesetan.HandsOff;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cheesetan.HandsOff.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		F3D976C82D3A2DFE000FB9D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 7K6ZTDFM48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "HandsOff-watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.cheesetan.HandsOff;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cheesetan.HandsOff.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -348,6 +505,15 @@
 			buildConfigurations = (
 				F3703E132B10EE2C002ECB9A /* Debug */,
 				F3703E142B10EE2C002ECB9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D976C92D3A2DFE000FB9D9 /* Build configuration list for PBXNativeTarget "HandsOff-watchOS Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D976C72D3A2DFE000FB9D9 /* Debug */,
+				F3D976C82D3A2DFE000FB9D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,14 +1,13 @@
 //
-//  DeviceDiscoveryView.swift
-//  HandsOff
+//  ContentView.swift
+//  HandsOff-watchOS Watch App
 //
-//  Created by Tristan Chay on 24/11/23.
+//  Created by Tristan Chay on 17/1/25.
 //
 
 import SwiftUI
 import CoreBluetooth
 
-#if os(iOS)
 struct CentralView: View {
     @StateObject private var bcManager = BluetoothCentralManager()
 
@@ -56,4 +55,7 @@ struct CommandView: View {
         }
     }
 }
-#endif
+
+#Preview {
+    CentralView()
+}

@@ -8,7 +8,8 @@
 import CoreBluetooth
 import SwiftUI
 
-#if os(iOS)
+#if os(macOS)
+#else
 class BluetoothCentralManager: NSObject, ObservableObject {
     @Published var discoveredPeripherals: [CBPeripheral] = []
     @Published var isScanning = false
